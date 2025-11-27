@@ -1,0 +1,27 @@
+Title,Publisher,Series Type
+Absolute Batman,DC Comics,Ongoing
+Absolute Superman,DC Comics,Ongoing
+Absolute Wonder Woman,DC Comics,Ongoing
+Absolute Flash,DC Comics,Ongoing
+Absolute Green Lantern,DC Comics,Ongoing
+Absolute Martian Manhunter,DC Comics,Ongoing
+Birds of Prey,DC Comics,Ongoing
+Green Lantern,DC Comics,Ongoing
+Justice League,DC Comics,Ongoing
+Captain Atom,DC Comics,Ongoing
+Titans,DC Comics,Ongoing
+Zatanna,DC Comics,Ongoing
+The Vision & The Scarlet Witch,DC Comics,Limited Series
+One World Under Doom,Marvel Comics,Event
+Aliens vs Avengers,Marvel Comics,Limited Series
+Amazing Spider-Man,Marvel Comics,Ongoing
+Moon Knight: Fist of Khonshu,Marvel Comics,Ongoing
+Captain America,Marvel Comics,Ongoing
+Marvel Rivals: Hellfire Gala,Marvel Comics,Limited Series
+Ultimate Wolverine,Marvel Comics,Ongoing
+Ultimate Spider-Man,Marvel Comics,Ongoing
+Fantastic Four,Marvel Comics,Ongoing
+Storm,Marvel Comics,Ongoing
+Transformers,Image Comics,Ongoing
+Teenage Mutant Ninja Turtles,IDW Publishing,Ongoing
+The Power Fantasy,Image Comics,Ongoing
