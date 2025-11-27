@@ -1,634 +1,395 @@
 <div align="center">
 
-# 🦸‍♂️ AI Comic Recommender Platform
+# 🦸 Comic Recommender
 
-### *Discover Your Next Favorite Comic with Machine Learning*
+### Discover your next favorite comic with AI-powered recommendations
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-A full-stack web application that delivers **personalized comic book recommendations** powered by machine learning algorithms. Built with modern technologies for an exceptional user experience.
+**A modern full-stack web application that provides personalized comic book recommendations using machine learning.**
 
-[Features](#-features) • [Quick Start](#-quick-start) • [Tech Stack](#-tech-stack) • [API Docs](#-api-endpoints) • [Contributing](#-contributing)
+[Getting Started](#-getting-started) · [Features](#-features) · [Tech Stack](#-tech-stack) · [API Reference](#-api-reference)
 
 </div>
 
 ---
 
+## 📖 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Getting Started](#-getting-started)
+- [Tech Stack](#-tech-stack)
+- [API Reference](#-api-reference)
+- [How It Works](#-how-it-works)
+- [Development](#-development)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 About
+
+Comic Recommender is a full-stack platform that helps comic book enthusiasts discover new titles based on their reading preferences. Using content-based filtering and machine learning algorithms, the platform analyzes your ratings and suggests comics that match your taste.
+
+### Key Highlights
+
+- 🎨 **Modern UI** - Beautiful, responsive interface built with React and TailwindCSS
+- 🤖 **Smart AI** - Content-based filtering using TF-IDF and cosine similarity
+- 🔒 **Secure** - JWT authentication with encrypted password storage
+- 🚀 **Fast** - Optimized performance with FastAPI and PostgreSQL
+- 🐳 **Easy Setup** - One-command deployment with Docker Compose
+
+---
+
 ## ✨ Features
 
-<table>
-<tr>
-<td>
+### For Users
+- 📚 Browse extensive Marvel and DC comic collections
+- ⭐ Rate comics on a 5-star scale
+- 🎯 Get personalized AI-powered recommendations
+- 📊 Track your reading history and preferences
+- 🔍 Search and filter comics by genre and characters
 
-### 🔐 **Secure Authentication**
-- JWT-based authentication
-- Encrypted password storage
-- Protected API endpoints
-- Session management
+### For Developers
+- 🔐 JWT-based authentication system
+- 📡 RESTful API with comprehensive documentation
+- 🗄️ PostgreSQL database with SQLAlchemy ORM
+- 🐳 Docker containerization for easy deployment
+- 📚 Interactive API docs with Swagger UI
 
-</td>
-<td>
+---
 
-### 📚 **Rich Comic Library**
-- Browse popular Marvel & DC titles
-- Detailed comic information
-- High-quality cover images
-- Genre categorization
-
-</td>
-</tr>
-<tr>
-<td>
-
-### ⭐ **Smart Rating System**
-- Rate comics 1-5 stars
-- Build your reading profile
-- Track your ratings history
-- Personalized preferences
-
-</td>
-<td>
-
-### 🤖 **AI-Powered Recommendations**
-- TF-IDF content analysis
-- Cosine similarity matching
-- Personalized suggestions
-- Explanation for each recommendation
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 📱 **Beautiful UI/UX**
-- Responsive design
-- Modern TailwindCSS styling
-- Mobile-friendly interface
-- Smooth animations
-
-</td>
-<td>
-
-### 🐳 **Easy Deployment**
-- Docker containerization
-- Docker Compose orchestration
-- One-command setup
-- Production-ready configuration
-
-</td>
-</tr>
-</table>
-
-## 🛠️ Tech Stack
-
-<details>
-<summary><b>🎨 Frontend Stack</b></summary>
-
-| Technology | Purpose |
-|------------|---------|
-| **React 18** | Modern UI library with hooks |
-| **TailwindCSS** | Utility-first CSS framework |
-| **Axios** | Promise-based HTTP client |
-| **React Router v6** | Client-side routing |
-| **React Context** | State management |
-
-</details>
-
-<details>
-<summary><b>⚙️ Backend Stack</b></summary>
-
-| Technology | Purpose |
-|------------|---------|
-| **FastAPI** | High-performance Python web framework |
-| **SQLAlchemy** | Python SQL toolkit and ORM |
-| **Pydantic** | Data validation with type hints |
-| **PostgreSQL** | Relational database |
-| **JWT** | Secure token-based authentication |
-| **scikit-learn** | Machine learning algorithms |
-| **Uvicorn** | ASGI server |
-
-</details>
-
-<details>
-<summary><b>🐳 DevOps & Tools</b></summary>
-
-| Technology | Purpose |
-|------------|---------|
-| **Docker** | Application containerization |
-| **Docker Compose** | Multi-container orchestration |
-| **PostgreSQL** | Data persistence with volumes |
-| **Git** | Version control |
-
-</details>
-
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
-- 🐳 [Docker](https://www.docker.com/get-started) (v20.10+)
-- 🐙 [Docker Compose](https://docs.docker.com/compose/install/) (v2.0+)
-- 📦 [Git](https://git-scm.com/downloads)
+- [Docker](https://docs.docker.com/get-docker/) (v20.10+)
+- [Docker Compose](https://docs.docker.com/compose/install/) (v2.0+)
+- [Git](https://git-scm.com/downloads)
 
-### ⚡ One-Command Setup
+### Quick Start (Docker - Recommended)
 
 ```bash
 # Clone the repository
 git clone https://github.com/rahulbattula415/ComicRecomender.git
 cd ComicRecomender
 
-# Start all services with Docker Compose
+# Start all services
 docker-compose up --build
 ```
 
-**That's it!** 🎉 The entire application will be up and running.
+🎉 That's it! The application will be available at:
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
 
-### 📍 Access Points
+### First Steps
 
-Once the containers are running, access the application at:
-
-| Service | URL | Description |
-|---------|-----|-------------|
-| 🎨 **Frontend** | [http://localhost:3000](http://localhost:3000) | React web application |
-| ⚡ **Backend API** | [http://localhost:8000](http://localhost:8000) | FastAPI server |
-| 📚 **API Docs** | [http://localhost:8000/docs](http://localhost:8000/docs) | Interactive Swagger UI |
-| 🗄️ **Database** | `localhost:5432` | PostgreSQL database |
-
-### 🎯 First Steps
-
-1. **Register** a new account at `http://localhost:3000/register`
-2. **Browse** comics and explore the collection
-3. **Rate** some comics (⭐ 4-5 stars for comics you like)
-4. **Get recommendations** tailored to your taste!
+1. Open http://localhost:3000 in your browser
+2. Create an account by clicking "Register"
+3. Browse the comic collection
+4. Rate at least 3-5 comics (give 4-5 stars to comics you like)
+5. Visit the "Recommendations" page to see personalized suggestions!
 
 ---
 
-## 📸 Screenshots
+## 🛠️ Tech Stack
 
-<div align="center">
+### Frontend
+- **React 18** - UI library with hooks
+- **TailwindCSS** - Utility-first CSS framework
+- **Axios** - HTTP client
+- **React Router v6** - Client-side routing
+- **Context API** - State management
 
-### 🏠 Home Page
-*Beautiful landing page with featured comics*
+### Backend
+- **FastAPI** - High-performance Python framework
+- **SQLAlchemy** - SQL toolkit and ORM
+- **Pydantic** - Data validation
+- **PostgreSQL** - Relational database
+- **JWT** - Authentication
+- **scikit-learn** - ML algorithms
+- **Uvicorn** - ASGI server
 
-### 📚 Browse Comics
-*Explore the complete comic collection with ratings*
-
-### 🤖 AI Recommendations
-*Get personalized suggestions based on your preferences*
-
-### ⭐ Rating System
-*Rate comics and build your profile*
-
-</div>
-
-> 🎨 **Note**: Add screenshots by placing images in `/docs/screenshots/` and updating the paths above
+### DevOps
+- **Docker** - Containerization
+- **Docker Compose** - Multi-container orchestration
+- **PostgreSQL** - Database with persistent volumes
 
 ---
 
-## 💻 Manual Setup (Development)
+## 📡 API Reference
 
-For local development without Docker:
+### Authentication
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/auth/register` | POST | Register new user | No |
+| `/api/auth/login` | POST | Login user | No |
+| `/api/auth/me` | GET | Get current user | Yes |
+
+### Comics
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/comics` | GET | List all comics | No |
+| `/api/comics/{id}` | GET | Get comic details | No |
+| `/api/comics` | POST | Create new comic | Yes |
+
+### Ratings
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/ratings` | POST | Rate a comic | Yes |
+| `/api/ratings` | GET | Get user ratings | Yes |
+| `/api/ratings/{comic_id}` | GET | Get specific rating | Yes |
+
+### Recommendations
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/recommendations` | GET | Get AI recommendations | Yes |
+
+> 📚 **Full API Documentation**: Visit http://localhost:8000/docs for interactive Swagger UI
+
+---
+
+## 🧠 How It Works
+
+The recommendation engine uses **content-based filtering** to suggest comics similar to ones you've rated highly:
+
+### Algorithm Pipeline
+
+```
+User Ratings (4-5 ⭐) → Feature Extraction → TF-IDF Vectorization → 
+Cosine Similarity → Ranked Results → Top 5 Recommendations
+```
+
+### Process
+
+1. **Data Collection** - Gathers comics you rated 4-5 stars
+2. **Feature Extraction** - Combines description, characters, and genre
+3. **Vectorization** - Converts text to numerical vectors using TF-IDF
+4. **Similarity Calculation** - Finds similar comics using cosine similarity
+5. **Ranking** - Returns top 5 most similar comics with scores
+
+### Why Content-Based Filtering?
+
+- ✅ Personalized to your specific tastes
+- ✅ Works without large user base (no cold start problem)
+- ✅ Explainable recommendations
+- ✅ No bias from other users' ratings
+
+---
+
+## 💻 Development
+
+### Manual Setup (Without Docker)
 
 <details>
-<summary><b>🔧 Backend Setup</b></summary>
+<summary><b>Backend Setup</b></summary>
 
-### Step 1: Navigate to Backend Directory
 ```bash
+# Navigate to backend
 cd backend
-```
 
-### Step 2: Create Virtual Environment
-```bash
-# Create venv
+# Create virtual environment
 python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux/Mac
 
-# Activate (Linux/Mac)
-source venv/bin/activate
-
-# Activate (Windows)
-venv\Scripts\activate
-```
-
-### Step 3: Install Dependencies
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### Step 4: Configure Environment Variables
-```bash
-# Copy example env file
-cp .env.example .env
+# Set up environment variables
+# Create a .env file with:
+# DATABASE_URL=postgresql://user:password@localhost/comic_recommender
+# SECRET_KEY=your-secret-key-change-in-production
+# ALGORITHM=HS256
+# ACCESS_TOKEN_EXPIRE_MINUTES=30
 
-# Edit .env with your settings
-```
-
-**Required environment variables:**
-```env
-DATABASE_URL=postgresql://username:password@localhost/comic_recommender
-SECRET_KEY=your-super-secret-key-change-this-in-production
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-```
-
-### Step 5: Set Up PostgreSQL Database
-```bash
-# Install PostgreSQL
-# Then create database
+# Create PostgreSQL database
 createdb comic_recommender
 
-# Or using psql
-psql -U postgres
-CREATE DATABASE comic_recommender;
-\q
-```
-
-### Step 6: Initialize Database Tables
-```bash
+# Initialize database
 python -c "from app.core.database import engine; from app.models import Base; Base.metadata.create_all(bind=engine)"
-```
 
-### Step 7: Seed Database (Optional)
-```bash
-# Add sample comics
-python seed_data.py
-
-# Or fetch real comics
+# Seed database with comics
 python fetch_flexible_comics.py
-```
 
-### Step 8: Start Backend Server
-```bash
+# Start server
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-✅ Backend running at http://localhost:8000
+Backend will be running at http://localhost:8000
 
 </details>
 
 <details>
-<summary><b>🎨 Frontend Setup</b></summary>
+<summary><b>Frontend Setup</b></summary>
 
-### Step 1: Navigate to Frontend Directory
 ```bash
+# Navigate to frontend
 cd frontend
-```
 
-### Step 2: Install Dependencies
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-### Step 3: Configure API Endpoint (Optional)
-If your backend is not at `http://localhost:8000`, update `src/services/api.js`:
-```javascript
-const API_URL = 'http://your-backend-url:8000';
-```
-
-### Step 4: Start Development Server
-```bash
+# Start development server
 npm start
-# or
-yarn start
 ```
 
-✅ Frontend running at http://localhost:3000
+Frontend will be running at http://localhost:3000
 
 </details>
-
-## 📡 API Endpoints
-
-### 🔐 Authentication
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `POST` | `/api/auth/register` | Register a new user | ❌ |
-| `POST` | `/api/auth/login` | Login and receive JWT token | ❌ |
-| `GET` | `/api/auth/me` | Get current user profile | ✅ |
-
-### 📚 Comics
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `GET` | `/api/comics` | Get all comics (paginated) | ❌ |
-| `GET` | `/api/comics/{id}` | Get specific comic details | ❌ |
-| `POST` | `/api/comics` | Create new comic | ✅ |
-
-### ⭐ Ratings
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `POST` | `/api/ratings` | Rate a comic (1-5 stars) | ✅ |
-| `GET` | `/api/ratings` | Get all user's ratings | ✅ |
-| `GET` | `/api/ratings/{comic_id}` | Get rating for specific comic | ✅ |
-
-### 🤖 Recommendations
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `GET` | `/api/recommendations` | Get AI-powered recommendations | ✅ |
-
-### 📊 Statistics
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `GET` | `/api/stats` | Get platform statistics | ❌ |
-
-> 💡 **Tip**: Visit [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API documentation with try-it-out functionality!
-
-## 🧠 How the Recommendation System Works
-
-Our AI recommendation engine uses **content-based filtering** to deliver personalized comic suggestions:
-
-```mermaid
-graph LR
-    A[User Ratings] -->|4-5 Stars| B[Feature Extraction]
-    B --> C[TF-IDF Vectorization]
-    C --> D[Cosine Similarity]
-    D --> E[Top Recommendations]
-    E --> F[User]
-```
-
-### 📊 Algorithm Pipeline
-
-| Step | Process | Technology |
-|------|---------|------------|
-| **1️⃣ Data Collection** | Gather user's highly-rated comics (4-5 stars) | SQLAlchemy |
-| **2️⃣ Feature Extraction** | Combine description, characters, and genre | Python |
-| **3️⃣ Vectorization** | Convert text to numerical vectors | TF-IDF (scikit-learn) |
-| **4️⃣ Similarity Calculation** | Find similar comics using cosine similarity | NumPy |
-| **5️⃣ Ranking** | Sort and return top 5 recommendations | pandas |
-
-### 🎯 Key Features
-
-- **Content-Based**: Analyzes comic content, not just popularity
-- **Personalized**: Based on your specific reading preferences
-- **Explainable**: Each recommendation includes a similarity score
-- **Fast**: Optimized algorithms for real-time recommendations
-- **Scalable**: Efficient vectorization for large comic collections
-
-## 🗄️ Database Schema
-
-```mermaid
-erDiagram
-    USERS ||--o{ USER_RATINGS : creates
-    COMICS ||--o{ USER_RATINGS : receives
-    
-    USERS {
-        int id PK
-        string email UK
-        string password_hash
-        datetime created_at
-    }
-    
-    COMICS {
-        int id PK
-        string title
-        text description
-        array characters
-        string genre
-        string image_url
-        string external_id UK
-        datetime created_at
-    }
-    
-    USER_RATINGS {
-        int id PK
-        int user_id FK
-        int comic_id FK
-        int rating
-        datetime created_at
-    }
-```
-
-### Table Details
-
-<details>
-<summary><b>👤 Users Table</b></summary>
-
-| Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | INTEGER | PRIMARY KEY | Unique user identifier |
-| `email` | VARCHAR | UNIQUE, NOT NULL | User email address |
-| `password_hash` | VARCHAR | NOT NULL | Bcrypt hashed password |
-| `created_at` | TIMESTAMP | DEFAULT NOW | Account creation time |
-
-</details>
-
-<details>
-<summary><b>📚 Comics Table</b></summary>
-
-| Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | INTEGER | PRIMARY KEY | Unique comic identifier |
-| `title` | VARCHAR | NOT NULL | Comic title |
-| `description` | TEXT | | Comic description/synopsis |
-| `characters` | ARRAY | | List of characters |
-| `genre` | VARCHAR | | Comic genre |
-| `image_url` | VARCHAR | | Cover image URL |
-| `external_id` | VARCHAR | UNIQUE | External API identifier |
-| `created_at` | TIMESTAMP | DEFAULT NOW | Record creation time |
-
-</details>
-
-<details>
-<summary><b>⭐ User Ratings Table</b></summary>
-
-| Column | Type | Constraints | Description |
-|--------|------|-------------|-------------|
-| `id` | INTEGER | PRIMARY KEY | Unique rating identifier |
-| `user_id` | INTEGER | FOREIGN KEY | References users(id) |
-| `comic_id` | INTEGER | FOREIGN KEY | References comics(id) |
-| `rating` | INTEGER | 1-5 | Star rating value |
-| `created_at` | TIMESTAMP | DEFAULT NOW | Rating creation time |
-
-**Constraints**: UNIQUE(user_id, comic_id) - One rating per user per comic
-
-</details>
-
-## Environment Variables
-
-### Backend (.env)
-```
-DATABASE_URL=postgresql://username:password@localhost/comic_recommender
-SECRET_KEY=your-secret-key-here-change-in-production
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-```
-
-## Development
 
 ### Project Structure
+
 ```
-ComicProject/
+ComicRecomender/
 ├── backend/
 │   ├── app/
-│   │   ├── api/          # API routes
-│   │   ├── core/         # Core functionality (config, database, security)
+│   │   ├── api/          # API route handlers
+│   │   ├── core/         # Config, database, security
 │   │   ├── models/       # SQLAlchemy models
-│   │   ├── services/     # Business logic (recommendations)
-│   │   └── main.py       # FastAPI app
+│   │   ├── services/     # Business logic
+│   │   └── main.py       # FastAPI application
 │   ├── requirements.txt
-│   ├── Dockerfile
-│   └── seed_data.py
+│   └── Dockerfile
 ├── frontend/
 │   ├── src/
-│   │   ├── components/   # Reusable React components
+│   │   ├── components/   # React components
 │   │   ├── pages/        # Page components
-│   │   ├── services/     # API services
-│   │   ├── contexts/     # React contexts (Auth)
-│   │   └── App.js
+│   │   ├── contexts/     # React contexts
+│   │   └── services/     # API services
 │   ├── package.json
 │   └── Dockerfile
 └── docker-compose.yml
 ```
 
-### Adding New Features
+### Database Schema
 
-1. **Backend**: Add routes in `app/api/`, models in `app/models/`, business logic in `app/services/`
-2. **Frontend**: Add components in `src/components/`, pages in `src/pages/`
-3. **Database**: Update models and create migrations
+```sql
+-- Users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR UNIQUE NOT NULL,
+    password_hash VARCHAR NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
+);
 
-## Testing
+-- Comics table
+CREATE TABLE comics (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description TEXT,
+    characters TEXT[],
+    genre VARCHAR,
+    image_url VARCHAR,
+    external_id VARCHAR UNIQUE,
+    created_at TIMESTAMP DEFAULT NOW()
+);
 
-### Backend Tests
-```bash
-cd backend
-python -m pytest
+-- User ratings table
+CREATE TABLE user_ratings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    comic_id INTEGER REFERENCES comics(id),
+    rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+    created_at TIMESTAMP DEFAULT NOW(),
+    UNIQUE(user_id, comic_id)
+);
 ```
-
-### Frontend Tests
-```bash
-cd frontend
-npm test
-```
-
-## Deployment
-
-### Production Setup
-1. **Update environment variables** for production
-2. **Set up PostgreSQL database** on your server
-3. **Build and deploy** using Docker Compose
-4. **Set up reverse proxy** (nginx) for SSL/domain
-
-### Docker Production
-```bash
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-## Stretch Goals & Future Enhancements
-
-- 🧠 **OpenAI Embeddings**: Replace TF-IDF with OpenAI embeddings for better semantic understanding
-- 🚀 **Redis Caching**: Add Redis for recommendation caching and improved performance
-- 📊 **Analytics Dashboard**: User reading analytics and recommendation effectiveness
-- 🔍 **Advanced Search**: Full-text search with filters
-- 👥 **Social Features**: Follow users, share recommendations
-- 📱 **Mobile App**: React Native mobile application
-- 🎨 **Comic Upload**: Allow users to upload their own comics
-- 🏷️ **Tagging System**: Advanced tagging and categorization
 
 ---
 
-## 🎯 Roadmap & Future Enhancements
+## 🗺️ Roadmap
 
-### 🚧 In Progress
-- [ ] OpenAI embeddings for semantic understanding
-- [ ] Redis caching for improved performance
+### Current Features
+- ✅ User authentication and authorization
+- ✅ Comic browsing and search
+- ✅ Rating system
+- ✅ AI-powered recommendations
+- ✅ Responsive design
+- ✅ Docker deployment
 
-### 🔮 Planned Features
-- [ ] **Analytics Dashboard** - User reading analytics and insights
-- [ ] **Advanced Search** - Full-text search with complex filters
-- [ ] **Social Features** - Follow users, share recommendations, reviews
-- [ ] **Mobile App** - React Native iOS/Android application
-- [ ] **Reading Lists** - Create and share custom reading lists
-- [ ] **Dark Mode** - Theme customization
+### Coming Soon
+- [ ] Advanced search with filters
+- [ ] User profiles and reading lists
+- [ ] Social features (follow, share)
+- [ ] Comic reading history analytics
+- [ ] Dark mode
+- [ ] Mobile app (React Native)
+- [ ] OpenAI embeddings for better recommendations
+- [ ] Redis caching for performance
 
-### 💡 Ideas & Suggestions
-Have an idea? [Open an issue](https://github.com/rahulbattula415/ComicRecomender/issues/new) with the `enhancement` label!
+### Ideas
+- Community reviews and discussions
+- Comic release notifications
+- Reading challenges and achievements
+- Integration with comic reading platforms
 
 ---
 
 ## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+Contributions are welcome! Here's how you can help:
 
-### 📝 Contributing Guidelines
+### How to Contribute
 
-1. **Fork** the repository
-2. **Clone** your fork locally
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/ComicRecomender.git
-   cd ComicRecomender
-   ```
-3. **Create** a feature branch
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-4. **Make** your changes and commit
-   ```bash
-   git commit -m '✨ Add amazing feature'
-   ```
-5. **Push** to your fork
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-6. **Open** a Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### 🎨 Commit Convention
+### Development Guidelines
 
-We follow [Conventional Commits](https://www.conventionalcommits.org/):
+- Write clear, descriptive commit messages
+- Follow existing code style and conventions
+- Add tests for new features
+- Update documentation as needed
+- Keep PRs focused on a single feature/fix
 
-- ✨ `feat:` New feature
-- 🐛 `fix:` Bug fix
-- 📚 `docs:` Documentation changes
-- 🎨 `style:` Code style changes (formatting)
-- ♻️ `refactor:` Code refactoring
-- ⚡ `perf:` Performance improvements
-- ✅ `test:` Adding tests
-- 🔧 `chore:` Maintenance tasks
+### Found a Bug?
 
-### 🐛 Found a Bug?
-
-[Report it here](https://github.com/rahulbattula415/ComicRecomender/issues/new) with:
-- Clear description
+[Open an issue](https://github.com/rahulbattula415/ComicRecomender/issues/new) and include:
+- Clear bug description
 - Steps to reproduce
 - Expected vs actual behavior
-- Screenshots (if applicable)
+- Screenshots if applicable
+- Environment details (OS, browser, etc.)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Comic data sourced from [ComicVine API](https://comicvine.gamespot.com/api/)
-- Icons by [Heroicons](https://heroicons.com/)
-- UI inspiration from modern comic platforms
+- [ComicVine API](https://comicvine.gamespot.com/api/) for comic data
+- [Marvel](https://www.marvel.com/) and [DC Comics](https://www.dc.com/) for amazing characters
+- [Heroicons](https://heroicons.com/) for beautiful icons
+- Open source community for inspiration
 
 ---
 
-## 📧 Contact & Support
-
 <div align="center">
-
-**Questions? Suggestions? Issues?**
-
-[![GitHub Issues](https://img.shields.io/github/issues/rahulbattula415/ComicRecomender?style=for-the-badge)](https://github.com/rahulbattula415/ComicRecomender/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/rahulbattula415/ComicRecomender?style=for-the-badge)](https://github.com/rahulbattula415/ComicRecomender/stargazers)
 
 **Made with ❤️ by [Rahul Battula](https://github.com/rahulbattula415)**
 
-⭐ Star this repo if you find it helpful!
+[![GitHub Stars](https://img.shields.io/github/stars/rahulbattula415/ComicRecomender?style=social)](https://github.com/rahulbattula415/ComicRecomender/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/rahulbattula415/ComicRecomender?style=social)](https://github.com/rahulbattula415/ComicRecomender/network/members)
+
+[⭐ Star this repo](https://github.com/rahulbattula415/ComicRecomender) · [🐛 Report Bug](https://github.com/rahulbattula415/ComicRecomender/issues) · [✨ Request Feature](https://github.com/rahulbattula415/ComicRecomender/issues)
 
 </div>
- 
- 
